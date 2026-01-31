@@ -30,7 +30,7 @@ const startServer = async () => {
   try {
     const dbConn = await connectDB();
     app.listen(PORT, () => {
-      console.log(`✅ Backend running on http://localhost:${PORT}`);
+      console.log(`✅ Backend running on ${PORT}`);
       if (dbConn) {
         console.log('✅ MongoDB connected successfully');
       } else {
@@ -42,5 +42,11 @@ const startServer = async () => {
     process.exit(1);
   }
 };
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'EduMentor backend is running 🚀',
+    status: 'OK'
+  });
+});
 
 startServer();

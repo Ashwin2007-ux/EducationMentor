@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+const Home = ({ setActivePage }) => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -12,10 +12,16 @@ const Home = () => {
               Your AI-powered learning companion. Get instant help with homework, summarize documents, and enhance your study experience.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <button className="bg-white text-blue-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+              <button 
+                onClick={() => setActivePage && setActivePage('ai-tutor')}
+                className="bg-white text-blue-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+              >
                 Get Started
               </button>
-              <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors border border-white">
+              <button 
+                onClick={() => setActivePage && setActivePage('about')}
+                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors border border-white"
+              >
                 Learn More
               </button>
             </div>

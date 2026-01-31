@@ -5,11 +5,7 @@ services:
     buildCommand: cd backend && npm install
     startCommand: cd backend && npm start
     envVars:
-      - key: GROQ_API_KEY
-        value: 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
-      - key: FLOWISE_API_KEY
-        value: Hv1p-hFaDXjOjOB8EKT57s-iic-tdiCzaDQVjsCuWpE
       - key: MONGODB_URI
-        value: mongodb+srv://Ashwin-2008:Ashwin-2008@cluster0.and7wwb.mongodb.net/?appName=Cluster0
+        sync: false
       - key: FLOWISE_BASE_URL
         value: https://your-flowise-app.onrender.com
